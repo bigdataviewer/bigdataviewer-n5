@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/bigdataviewer/bigdataviewer-n5/actions/workflows/build.yml/badge.svg)](https://github.com/bigdataviewer/bigdataviewer-n5/actions/workflows/build.yml)
+
 # bigdataviewer-n5
 
 [![](https://github.com/bigdataviewer/bigdataviewer-n5/actions/workflows/build-main.yml/badge.svg)](https://github.com/bigdataviewer/bigdataviewer-n5/actions/workflows/build-main.yml)
