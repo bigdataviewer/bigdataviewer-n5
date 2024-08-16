@@ -90,6 +90,7 @@
 
 		<spim_data.version>2.3.0</spim_data.version>
 		<bigdataviewer-core.version>10.6.0</bigdataviewer-core.version>
+		<imglib2.version>7.1.0</imglib2.version>
 
 		<!-- from n5-universe -->
 		<n5-universe.version>1.6.0</n5-universe.version>
