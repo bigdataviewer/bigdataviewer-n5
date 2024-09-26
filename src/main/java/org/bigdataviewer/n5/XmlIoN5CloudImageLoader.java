@@ -35,6 +35,7 @@ import java.net.URI;
 
 import org.janelia.saalfeldlab.n5.N5Reader;
 import org.janelia.saalfeldlab.n5.universe.N5Factory;
+import org.janelia.saalfeldlab.n5.universe.N5Factory.StorageFormat;
 import org.jdom2.Element;
 
 import mpicbg.spim.data.XmlHelpers;
@@ -72,7 +73,23 @@ public class XmlIoN5CloudImageLoader implements XmlIoBasicImgLoader< N5CloudImag
 	{
 //		final String version = elem.getAttributeValue( "version" );
 		final URI uri = XmlHelpers.loadPathURI( elem, "n5", basePathURI );
-		final N5Reader n5Reader = N5Factory.createReader( uri.toString() );
+		//final N5Reader n5Reader = N5Factory.createReader( uri.toString() );
+
+		N5Reader n5Reader;
+
+		try
+		{
+			//System.out.println( "Trying reading with credentials ..." );
+			N5Factory factory = new N5Factory();
+			factory.s3UseCredentials();
+			n5Reader = factory.openReader( StorageFormat.N5, uri );
+		}
+		catch ( Exception e )
+		{
+			//System.out.println( "With credentials failed; trying anonymous ..." );
+			n5Reader = new N5Factory().openReader( StorageFormat.N5, uri );
+		}
+
 		return new N5CloudImageLoader( n5Reader, uri, sequenceDescription );
 	}
 }
