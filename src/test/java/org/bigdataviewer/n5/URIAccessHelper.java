@@ -40,6 +40,7 @@ import org.janelia.saalfeldlab.n5.N5Reader;
 import org.janelia.saalfeldlab.n5.KeyValueAccess;
 import org.janelia.saalfeldlab.n5.s3.AmazonS3Utils;
 import org.janelia.saalfeldlab.n5.universe.N5Factory;
+import org.janelia.saalfeldlab.n5.universe.StorageFormat;
 
 // TODO find a better name
 // TODO plugin mechanism similar to n5-universe?
@@ -92,7 +93,7 @@ public class URIAccessHelper
 
 	private static KeyValueAccess getKeyValueAccessFor( URI uri )
 	{
-		final N5Reader n5r = new N5Factory().openReader( N5Factory.StorageFormat.N5, uri );
+		final N5Reader n5r = new N5Factory().openReader( StorageFormat.N5, uri );
 		return ( ( GsonKeyValueN5Reader ) n5r ).getKeyValueAccess();
 	}
 

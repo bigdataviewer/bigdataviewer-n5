@@ -35,7 +35,7 @@ import java.net.URI;
 
 import org.janelia.saalfeldlab.n5.N5Reader;
 import org.janelia.saalfeldlab.n5.universe.N5Factory;
-import org.janelia.saalfeldlab.n5.universe.N5Factory.StorageFormat;
+import org.janelia.saalfeldlab.n5.universe.StorageFormat;
 import org.jdom2.Element;
 
 import mpicbg.spim.data.XmlHelpers;
