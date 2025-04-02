@@ -2,7 +2,7 @@
  * #%L
  * BigDataViewer backend for N5, Zarr, etc.
  * %%
- * Copyright (C) 2024 BigDataViewer developers.
+ * Copyright (C) 2024 - 2025 BigDataViewer developers.
  * %%
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
