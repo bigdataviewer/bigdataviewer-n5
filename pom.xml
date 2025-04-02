@@ -11,7 +11,7 @@
 
 	<groupId>org.bigdataviewer</groupId>
 	<artifactId>bigdataviewer-n5</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 
 	<name>BigDataViewer N5 backend</name>
 	<description>BigDataViewer backend for N5, Zarr, etc.</description>
@@ -71,7 +71,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/bigdataviewer/bigdataviewer-n5</connection>
 		<developerConnection>scm:git:git@github.com:bigdataviewer/bigdataviewer-n5</developerConnection>
-		<tag>HEAD</tag>
+		<tag>bigdataviewer-n5-1.0.2</tag>
 		<url>https://github.com/bigdataviewer/bigdataviewer-n5</url>
 	</scm>
 	<issueManagement>
