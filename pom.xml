@@ -11,7 +11,7 @@
 
 	<groupId>org.bigdataviewer</groupId>
 	<artifactId>bigdataviewer-n5</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 
 	<name>BigDataViewer N5 backend</name>
 	<description>BigDataViewer backend for N5, Zarr, etc.</description>
