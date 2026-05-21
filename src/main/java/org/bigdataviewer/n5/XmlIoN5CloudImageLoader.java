@@ -42,6 +42,7 @@ import mpicbg.spim.data.XmlHelpers;
 import mpicbg.spim.data.generic.sequence.AbstractSequenceDescription;
 import mpicbg.spim.data.generic.sequence.ImgLoaderIo;
 import mpicbg.spim.data.generic.sequence.XmlIoBasicImgLoader;
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
 
 @ImgLoaderIo( format = "bdv.n5.cloud", type = N5CloudImageLoader.class )
 public class XmlIoN5CloudImageLoader implements XmlIoBasicImgLoader< N5CloudImageLoader >
@@ -80,8 +81,11 @@ public class XmlIoN5CloudImageLoader implements XmlIoBasicImgLoader< N5CloudImag
 		try
 		{
 			//System.out.println( "Trying reading with credentials ..." );
-			N5Factory factory = new N5Factory();
-			factory.s3UseCredentials();
+			N5Factory factory = new N5Factory()
+				.s3Configuration(builder -> {
+					builder.credentialsProvider(DefaultCredentialsProvider.create());
+				});
+
 			n5Reader = factory.openReader( StorageFormat.N5, uri );
 		}
 		catch ( Exception e )
